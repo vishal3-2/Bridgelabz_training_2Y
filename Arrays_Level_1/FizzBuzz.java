@@ -1,0 +1,32 @@
+package Arrays.Arrays_Level_1;
+
+import java.util.Scanner;
+
+public class FizzBuzz {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter size of Array: ");
+        int n=sc.nextInt();
+        if(n<=0){
+            System.out.println("Invalid Input");
+        }else {
+            String arr[]=new String[n];
+            for(int i=0;i<n;i++){
+                if(i%3==0 && i%5==0){
+                    arr[i]="FizzBuzz";
+                } else if (i%5==0) {
+                    arr[i]="Buzz";
+                } else if (i%3==0) {
+                    arr[i]="Fizz";
+                }else {
+                    arr[i]= String.valueOf(i);
+                }
+            }
+            System.out.println("Output :- ");
+            for(int i=0;i<n;i++){
+                System.out.println(arr[i]);
+            }
+        }
+
+    }
+}
